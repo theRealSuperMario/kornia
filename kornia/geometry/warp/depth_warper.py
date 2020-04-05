@@ -190,7 +190,7 @@ class DepthWarper(nn.Module):
         """
         return F.grid_sample(patch_dst, self.warp_grid(depth_src),  # type: ignore
                              mode=self.mode, padding_mode=self.padding_mode,
-                             align_corners=True)
+                             align_corners=False)
 
 
 # functional api

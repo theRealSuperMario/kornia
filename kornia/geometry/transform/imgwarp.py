@@ -179,9 +179,9 @@ def warp_affine(src: torch.Tensor, M: torch.Tensor,
     src_norm_trans_dst_norm = torch.inverse(dst_norm_trans_src_norm)
     grid = F.affine_grid(src_norm_trans_dst_norm[:, :2, :],  # type: ignore
                          [B, C, out_size[0], out_size[1]],
-                         align_corners=True)
+                         align_corners=False)
     return F.grid_sample(src, grid,  # type: ignore
-                         align_corners=True,
+                         align_corners=False,
                          mode=flags,
                          padding_mode=padding_mode)
 
@@ -454,7 +454,7 @@ def remap(tensor: torch.Tensor, map_x: torch.Tensor,
     map_xy_norm = map_xy_norm.expand(batch_size, -1, -1, -1)
 
     # warp ans return
-    tensor_warped: torch.Tensor = F.grid_sample(tensor, map_xy_norm, align_corners=True)  # type: ignore
+    tensor_warped: torch.Tensor = F.grid_sample(tensor, map_xy_norm, align_corners=False)  # type: ignore
     return tensor_warped
 
 

@@ -109,7 +109,7 @@ class HomographyWarper(nn.Module):
 
         return F.grid_sample(patch_src, self.warp_grid(dst_homo_src),  # type: ignore
                              mode=self.mode, padding_mode=self.padding_mode,
-                             align_corners=True)
+                             align_corners=False)
 
 
 # functional api

@@ -105,7 +105,7 @@ class PyrUp(nn.Module):
         # upsample tensor
         b, c, height, width = input.shape
         x_up: torch.Tensor = F.interpolate(input, size=(height * 2, width * 2),
-                                           mode='bilinear', align_corners=True)
+                                           mode='bilinear', align_corners=False)
 
         # blurs upsampled tensor
         x_blur: torch.Tensor = filter2D(x_up, self.kernel, self.border_type)
