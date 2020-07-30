@@ -31,7 +31,7 @@ Note
 .. code:: bash
 
   # torch==1.5.x
-  pip install git+https://github.com/therealsupermario/kornia
+  pip install git+https://github.com/therealsupermario/kornia@fix/fixed_requirement
   # torch==1.4.x
   pip install git+git://github.com/therealsupermario/kornia.git@v0.2.2
 
