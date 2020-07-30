@@ -27,12 +27,14 @@
 Note
 ====
 * This branch removes the pytorch dependencies to prevent kornia from messing up your enviroment ([see here](https://github.com/kornia/kornia/issues/584)).
-* this works with `pytorch==1.5.1`.
-* install this version with
 
 .. code:: bash
 
+  # torch==1.5.x
   pip install git+https://github.com/therealsupermario/kornia
+  # torch==1.4.x
+  pip install git+git://github.com/therealsupermario/kornia.git@v0.2.2
+
 
 
 
