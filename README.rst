@@ -22,6 +22,15 @@
     :target: https://kornia.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
+
+
+Note
+====
+* This branch removes the pytorch dependencies to prevent kornia from messing up your enviroment ([see here](https://github.com/kornia/kornia/issues/584)).
+* this works with `pytorch==1.5.1`.
+
+
+
 *Kornia* is a differentiable computer vision library for `PyTorch <https://pytorch.org/>`_.
 
 It consists of a set of routines and differentiable modules to solve generic computer vision problems. At its core, the package uses *PyTorch* as its main backend both for efficiency and to take advantage of the reverse-mode auto-differentiation to define and compute the gradient of complex functions.
