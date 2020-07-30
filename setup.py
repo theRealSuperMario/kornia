@@ -75,12 +75,12 @@ class clean(distutils.command.clean.clean):
 
 
 pytorch_dep = 'torch'
-if os.getenv('PYTORCH_VERSION'):
-    pytorch_dep += "==" + os.getenv('PYTORCH_VERSION')
+#if os.getenv('PYTORCH_VERSION'):
+#    pytorch_dep += "==" + os.getenv('PYTORCH_VERSION')
 
 requirements = [
     'numpy',
-    pytorch_dep,
+#    pytorch_dep,
 ]
 
 
